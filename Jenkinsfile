@@ -2,13 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repo') {
-            steps {
-                git branch: 'main',
-                url: 'https://github.com/USERNAME/portfolio.git'
-            }
-        }
-
         stage('Deploy') {
             steps {
                 sh '''
